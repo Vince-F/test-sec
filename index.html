@@ -6,11 +6,12 @@
   <body>
     <script>
       if (window.parent) {
-        window.parent.alert("I can access JavaScript!");
+        const node = window.parent.document.createElement();
+        node.text = "injected";
+        window.parent.document.body.appendChild(node);
         window.parent.document.body.style.background = "rgb(255,0,0)";
       }
       if (window.top) {
-        window.top.alert("I access the top, which is it?");
         window.top.document.body.style.background = "rgb(0,255,0)";
       }
     </script>
