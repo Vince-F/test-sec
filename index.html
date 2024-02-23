@@ -6,7 +6,7 @@
   <body>
     <script>
       if (window.parent) {
-        const node = window.parent.document.createElement();
+        const node = window.parent.document.createElement("div");
         node.text = "injected";
         window.parent.document.body.appendChild(node);
         window.parent.document.body.style.background = "rgb(255,0,0)";
